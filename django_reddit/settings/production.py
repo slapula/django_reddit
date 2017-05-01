@@ -76,7 +76,18 @@ TEMPLATES[0]['OPTIONS']['loaders'] = [
 # DATABASE CONFIGURATION
 # ------------------------------------------------------------------------------
 # Raises ImproperlyConfigured exception if DATABASE_URL not in os.environ
-DATABASES['default'] = '127.0.0.1:5432'
+#DATABASES['default'] = '127.0.0.1:5432'
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'reddit',
+        'USER': 'reddit',
+        'PASSWORD': '1q2w3e4r!',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
+    }
+}
 
 # CACHING
 # ------------------------------------------------------------------------------
