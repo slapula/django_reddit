@@ -155,3 +155,5 @@ LOGGING = {
 ADMIN_URL = r'^dradmin/'
 
 # Your production stuff: Below this line define 3rd party library settings
+
+APPEND_SLASH = True
