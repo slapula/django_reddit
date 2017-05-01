@@ -18,31 +18,31 @@ SECRET_KEY = '1q2w3e4r'
 
 # This ensures that Django will be able to detect a secure connection
 # properly on Heroku.
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+#SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # django-secure
 # ------------------------------------------------------------------------------
-INSTALLED_APPS += ("djangosecure", )
+#INSTALLED_APPS += ("djangosecure", )
 
-SECURITY_MIDDLEWARE = (
-    'djangosecure.middleware.SecurityMiddleware',
-)
+#SECURITY_MIDDLEWARE = (
+#    'djangosecure.middleware.SecurityMiddleware',
+#)
 
-MIDDLEWARE_CLASSES = ()
+#MIDDLEWARE_CLASSES = ()
 # Make sure djangosecure.middleware.SecurityMiddleware is listed first
-MIDDLEWARE_CLASSES = SECURITY_MIDDLEWARE + MIDDLEWARE_CLASSES
+#MIDDLEWARE_CLASSES = SECURITY_MIDDLEWARE + MIDDLEWARE_CLASSES
 
 # set this to 60 seconds and then to 518400 when you can prove it works
-SECURE_HSTS_SECONDS = 60
-SECURE_HSTS_INCLUDE_SUBDOMAINS = env.bool(
-    "DJANGO_SECURE_HSTS_INCLUDE_SUBDOMAINS", default=True)
-SECURE_FRAME_DENY = env.bool("DJANGO_SECURE_FRAME_DENY", default=True)
-SECURE_CONTENT_TYPE_NOSNIFF = env.bool(
-    "DJANGO_SECURE_CONTENT_TYPE_NOSNIFF", default=True)
-SECURE_BROWSER_XSS_FILTER = True
-SESSION_COOKIE_SECURE = False
-SESSION_COOKIE_HTTPONLY = True
-SECURE_SSL_REDIRECT = env.bool("DJANGO_SECURE_SSL_REDIRECT", default=True)
+#SECURE_HSTS_SECONDS = 60
+#SECURE_HSTS_INCLUDE_SUBDOMAINS = env.bool(
+#    "DJANGO_SECURE_HSTS_INCLUDE_SUBDOMAINS", default=True)
+#SECURE_FRAME_DENY = env.bool("DJANGO_SECURE_FRAME_DENY", default=True)
+#SECURE_CONTENT_TYPE_NOSNIFF = env.bool(
+#    "DJANGO_SECURE_CONTENT_TYPE_NOSNIFF", default=True)
+#SECURE_BROWSER_XSS_FILTER = True
+#SESSION_COOKIE_SECURE = False
+#SESSION_COOKIE_HTTPONLY = True
+#SECURE_SSL_REDIRECT = env.bool("DJANGO_SECURE_SSL_REDIRECT", default=True)
 
 # SITE CONFIGURATION
 # ------------------------------------------------------------------------------
